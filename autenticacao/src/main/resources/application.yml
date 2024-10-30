@@ -9,7 +9,7 @@ app:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGNDATABASE}
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
     username: ${POSTGRES_USER}
     password: ${POSTGRES_PASSWORD}
     initialization-mode: always
