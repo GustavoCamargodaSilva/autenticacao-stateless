@@ -1,0 +1,1 @@
+INSERT INTO public.user (id, email, password) VALUES (1, 'admin', '$2y$10$EDogeE1XDcIT7nB0Yji6h.KcqoE.JoGtXzkgQxZeHWoMFVxkJvYYO');

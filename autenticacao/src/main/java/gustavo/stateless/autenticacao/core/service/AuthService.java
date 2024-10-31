@@ -20,11 +20,11 @@ public class AuthService {
     private final UserRepository userRepository;
 
     public TokenDTO login(AuthRequest request){
-        var user = userRepository.findByUsername(request.email())
+        var user = userRepository.findByEmail(request.email())
                 .orElseThrow(() -> new ValidationException("User not found"));
-        var acessToken = jwtService.createToken(user);
+        var accessToken = jwtService.createToken(user);
         validatePassword(request.password(), user.getPassword());
-        return new TokenDTO(acessToken);
+        return new TokenDTO(accessToken);
     }
 
     private void validatePassword(String rawPassword, String encodedPassword){
